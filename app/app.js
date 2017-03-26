@@ -7,7 +7,7 @@ import create_event from './components/create-event.js';
 import event_click from './components/event-click.js';
 import event_details from './components/event-details.js';
 import home from './components/home.js';
-import my_events from './components/my-events.js';
+import MyEvents from './components/my-events';
 import search_results from './components/search-results.js';
 
 // For each view conditionally determine which view to display
@@ -39,7 +39,7 @@ if (document.getElementById('calendar') !== null) {
   );
 } else if (document.getElementById('my-events') !== null) {
   ReactDOM.render(
-    <my_events />,
+    <MyEvents />,
     document.getElementById('my-events')
   );
 } else if (document.getElementById('search-results') !== null) {
