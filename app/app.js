@@ -39,10 +39,10 @@ if (document.getElementById('calendar') !== null) {
     <Home />,
     document.getElementById('home')
   );
-} else if (document.getElementById('my-events') !== null) {
+} else if (document.getElementById('list-my-events') !== null) {
   ReactDOM.render(
     <MyEvents />,
-    document.getElementById('my-events')
+    document.getElementById('list-my-events')
   );
 } else if (document.getElementById('search-results') !== null) {
   ReactDOM.render(

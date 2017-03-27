@@ -102,13 +102,13 @@
  good answer here: http://stackoverflow.com/a/22263969 -->
 <div class="container-fluid">
   <!-- The row that contains the two main columns of the website. -->
-  <div class="row" id="my-events">
+  <div class="row">
     <!-- Event: A cell that spans 9 columns -->
     <div class="col-md-9">
       <h1 class = "black"> My Events </h1>
-      <div class="panel panel-default event-entry">
+      <div id = "list-my-events">
+      <!-- <div class="panel panel-default event-entry">
         <div class="panel-body">
-          <!-- Event metadata -->
           <div class="row">
             <div class="col-md-12">
               <div class="media">
@@ -124,10 +124,9 @@
                     </span>
                   </h3>
                     <strong> Tomorrow at 5:00 pm </strong> <em> || W.E.B. Dubois Library </em>
-                    <!-- Event Content -->
                     <div class="row">
                       <div class="col-md-12 entry-font">
-                        <p> Review Session for CMPSCI 250. Be there or be square!
+                        <p /> Review Session for CMPSCI 250. Be there or be square!
                           More than just a review session! Reviewing: Inductive reasoning,
                           proof by contradiction, the properties of Cardie and Duncan, and
                           steady state machines.
@@ -160,9 +159,7 @@
       </div>
 
       <div class="panel panel-default event-entry">
-        <!--Event 2 Metadata -->
         <div class="panel-body">
-          <!-- Event metadata -->
           <div class="row">
             <div class="col-md-12">
               <div class="media">
@@ -178,7 +175,6 @@
                     </span>
                   </h3>
                     <strong> Friday at 7:00 pm </strong> <em> || Mullins Center </em>
-                    <!-- Event Content -->
                     <div class="row">
                       <div class="col-md-12 entry-font">
                         <p> UMass vs. Boston College. Show up to show your support for the minutemen
@@ -210,7 +206,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+    </div>
     </div>
 
     <!-- Right sidebar: A cell that spans 3 columns -->
@@ -273,5 +270,6 @@
 <!-- Include all compiled plugins (below),
      or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
