@@ -6,7 +6,7 @@ import calendar from './components/calendar.js';
 import create_event from './components/create-event.js';
 import Event_Click from './components/event-click.js';
 // import event_details from './components/event-details.js';
-import Right from './components/event-details';
+import EventDeets from './components/event-details';
 import home from './components/home.js';
 import MyEvents from './components/my-events';
 import search_results from './components/search-results.js';
@@ -30,8 +30,7 @@ if (document.getElementById('calendar') !== null) {
   );
 } else if (document.getElementById('event-deets') !== null) {
   ReactDOM.render(
-    // <event_details />,
-    <Right />,
+    <EventDeets />,
     document.getElementById('event-deets')
   );
 } else if (document.getElementById('home') !== null) {
