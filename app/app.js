@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom';
 // Each major browser view user interface must be imported.
 import calendar from './components/calendar.js';
 import createEvent from './components/create-event.js';
-import event_click from './components/event-click.js';
+import Event_Click from './components/event-click.js';
 // import event_details from './components/event-details.js';
-import Right_Bar from './components/event-details';
+
+import EventDeets from './components/event-details';
 import home from './components/home.js';
+
 import MyEvents from './components/my-events';
 import search_results from './components/search-results.js';
 
@@ -23,26 +25,35 @@ if (document.getElementById('calendar') !== null) {
     <createEvent />,
     document.getElementById('create-event')
   );
+} else if (document.getElementById('right-bar') !== null) {
+  ReactDOM.render(
+    <Right_Bar />,
+    document.getElementById('right-bar')
+  );
+} else if (document.getElementById('nav-bar') !== null) {
+  ReactDOM.render(
+    <Nav_Bar />,
+    document.getElementById('nav-bar')
+  );
 } else if (document.getElementById('event-click') !== null) {
   ReactDOM.render(
-    <event_click />,
+    <Event_Click />,
     document.getElementById('event-click')
   );
 } else if (document.getElementById('event-deets') !== null) {
   ReactDOM.render(
-    // <event_details />,
-    <Right_Bar />,
+    <EventDeets />,
     document.getElementById('event-deets')
   );
 } else if (document.getElementById('home') !== null) {
   ReactDOM.render(
-    <home />,
+    <Home />,
     document.getElementById('home')
   );
-} else if (document.getElementById('my-events') !== null) {
+} else if (document.getElementById('list-my-events') !== null) {
   ReactDOM.render(
     <MyEvents />,
-    document.getElementById('my-events')
+    document.getElementById('list-my-events')
   );
 } else if (document.getElementById('search-results') !== null) {
   ReactDOM.render(
