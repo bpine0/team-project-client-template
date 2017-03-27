@@ -1,15 +1,12 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import EventDetails from './event-details-entry';
 
-export default class Right extends React.Component {
+export default class EventDeets extends React.Component {
   render() {
     return (
       <div>
-
-        <Right_Bar/>
-
-
-     </div>
+        <EventDetails />
+      </div>
     )
   }
 }
