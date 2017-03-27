@@ -5,7 +5,7 @@ export default class Right_Bar extends React.Component {
   render() {
     return (
       <div>
-      // <div className = "col-md-2 pull-right">
+      <div className = "col-md-2 pull-right">
         <div className= "row">
           <div className= "col-md-12 sidebar-pills">
             <p></p>
@@ -55,7 +55,7 @@ export default class Right_Bar extends React.Component {
           </ul>
       </div>
       </div>
-    // </div>
+    </div>
     )
   }
 }
