@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Each major browser view user interface must be imported.
-import calendar from './components/calendar.js';
+import Calendar from './components/calendar.js';
 import createEvent from './components/create-event.js';
 import Event_Click from './components/event-click.js';
 // import event_details from './components/event-details.js';
@@ -17,7 +17,7 @@ import SearchResults from './components/search-results.js';
 // depending on if the ID is present in the HTML.
 if (document.getElementById('calendar') !== null) {
   ReactDOM.render(
-    <calendar />,
+    <Calendar />,
     document.getElementById('calendar')
   );
 } else if (document.getElementById('create-event') !== null) {
