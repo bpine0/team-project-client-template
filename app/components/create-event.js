@@ -8,8 +8,8 @@ export default class CreateEvent extends React.Component {
     return (
       <div>
         <Nav_Bar/>
-        <createRBar/>
-        <createList/>
+        <createRBar />
+        <createList />
       </div>
     )
   }
