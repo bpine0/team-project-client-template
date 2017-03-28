@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 // Each major browser view user interface must be imported.
 import Calendar from './components/calendar.js';
-import createEvent from './components/create-event.js';
+import CreateEvent from './components/create-event.js';
 import Event_Click from './components/event-click.js';
 // import event_details from './components/event-details.js';
 
@@ -22,7 +22,7 @@ if (document.getElementById('calendar') !== null) {
   );
 } else if (document.getElementById('create-event') !== null) {
   ReactDOM.render(
-    <createEvent />,
+    <CreateEvent />,
     document.getElementById('create-event')
   );
 } else if (document.getElementById('event-click') !== null) {
