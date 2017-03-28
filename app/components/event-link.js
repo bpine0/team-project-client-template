@@ -8,7 +8,8 @@ export default class EventLink extends React.Component {
         <span className= "glyphicon glyphicon-star-empty white"></span>
       </div>
       <div className="media-body">
-          <a href="#">{this.props.name}({this.props.info})</a> 
+          <a href="#" style={{color: 'black', fontWeight:'bold'}}>{this.props.name}({this.props.info})</a>
+            <p />
         </div>
       </div>
     )
