@@ -13,7 +13,7 @@
     }
     body {
       line-height: 1.5;
-      margin: 30px;
+      margin: 50px;
       background-color: #a43939;
     }
     .calendar {
@@ -48,12 +48,17 @@ table {
       border: 1px solid black;
       text-align: right; vertical-align: top;
       padding-right: 5px;
+      height: 200;
+    }
+    tr{
+      height:100px;
     }
     tr:first-child td {
       color: #222;
       font-weight: 900;
       font-size: 15px;
       text-align: center; vertical-align: middle;
+      height: 25px;
 
     }
     .event{

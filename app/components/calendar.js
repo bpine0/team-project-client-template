@@ -1,19 +1,14 @@
-<<<<<<< HEAD
-
 import React from 'react';
 import Nav_Bar from './nav-bar';
 
-=======
-import React from 'react';
-import Nav_Bar from './nav-bar';
->>>>>>> d51db683dbef767ce71fe5b3dfd6840125c497e2
-//import Events from './event-details';
 
 export default class Calendar extends React.Component{
   render() {
     return(
       <div>
         <Nav_Bar/>
+
+
         <header>
           <button className="arrows">«</button>
           <h2>February 2017  <span style={{fontWeight: 'lighter'}}> My Events </span>
@@ -67,8 +62,8 @@ export default class Calendar extends React.Component{
             </tr> <tr>
               <td>19</td>
               <td>20</td>
-              <td className="event"> 21 <span style={{fontSize: '110%', color: 'yellow'}}>☆ </span>
-                Supplemental Instruction Review <i> 5pm </i> LRC
+              <td className="event"> 21 <span style={{fontSize: '110%', color: 'yellow'}}>☆ </span> <br />
+                 Supplemental Instruction Review <i> 5pm </i> LRC
               </td>
               <td>22</td>
               <td>23</td>
