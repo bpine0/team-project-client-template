@@ -1,13 +1,15 @@
 import React from 'react';
-import Right_Bar from './right-bar';
+import createRBar from './create-rBar';
 import Nav_Bar from './nav-bar';
+import createList from './create-list';
 
-export default class createEvent extends React.Component {
+export default class CreateEvent extends React.Component {
   render() {
     return (
       <div>
         <Nav_Bar/>
-        <Right_Bar/>
+        <createRBar/>
+        <createList/>
       </div>
     )
   }

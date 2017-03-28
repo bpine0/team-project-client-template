@@ -7,7 +7,7 @@ export default class SearchResults extends React.Component {
   render() {
     return (
       <div>
-        <Right_Bar/>
+        //<Right_Bar/>
         <Nav_Bar/>
         <SearchList/>
       </div>
