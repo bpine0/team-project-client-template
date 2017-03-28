@@ -11,7 +11,7 @@ import EventDeets from './components/event-details';
 import Home from './components/home.js';
 
 import MyEvents from './components/my-events';
-import search_results from './components/search-results.js';
+import SearchResults from './components/search-results.js';
 
 // For each view conditionally determine which view to display
 // depending on if the ID is present in the HTML.
@@ -45,9 +45,9 @@ if (document.getElementById('calendar') !== null) {
     <MyEvents />,
     document.getElementById('list-my-events')
   );
-} else if (document.getElementById('search-results') !== null) {
+} else if (document.getElementById('search_results') !== null) {
   ReactDOM.render(
-    <search_results />,
-    document.getElementById('search-results')
+    <SearchResults />,
+    document.getElementById('search_results')
   );
 }
