@@ -20,10 +20,10 @@ if (document.getElementById('calendar') !== null) {
     <Calendar />,
     document.getElementById('calendar')
   );
-} else if (document.getElementById('create-event') !== null) {
+} else if (document.getElementById('create-list') !== null) {
   ReactDOM.render(
     <CreateEvent />,
-    document.getElementById('create-event')
+    document.getElementById('create-list')
   );
 } else if (document.getElementById('event-click') !== null) {
   ReactDOM.render(
