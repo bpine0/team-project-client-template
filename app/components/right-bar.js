@@ -8,8 +8,6 @@ export default class Right_Bar extends React.Component {
         <div className = "col-md-2 pull-right">
         <div className= "row">
           <div className= "col-md-12 sidebar-pills">
-            <p></p>
-            <p></p>
             <ul className= "nav nav-pills">
               <li role="presentation" className= "active">
                 <a href="#" className =  "btn btn-default navbar-btn"><span className= "glyphicon glyphicon-fire"></span></a>
