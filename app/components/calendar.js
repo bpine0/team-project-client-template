@@ -1,3 +1,4 @@
+
 // import React from 'react';
 // import Events from './event-details';
 //
@@ -76,7 +77,7 @@
 //             24
 //            <span style="font-size:110%;color:yellow;">&star; </span> </br>
 //             UMass vs. BC Hockey Game <i> 7pm </i> Mullins Center
-// 
+//
 //         </td>
 //           <td>25</td>
 //         </tr>
