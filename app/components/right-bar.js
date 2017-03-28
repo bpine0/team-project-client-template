@@ -33,7 +33,7 @@ export default class Right_Bar extends React.Component {
                 <span className= "glyphicon glyphicon-star-empty white"></span>
               </div>
               <div className= "media-body">
-                <a href="#">Supplemental Instruction Review (UMass LRC)</a>
+                <a href="#" style={{color: 'black', fontWeight: 'bold'}}>Supplemental Instruction Review (UMass LRC)</a>
               </div>
             </li>
             <li className= "media">
@@ -41,7 +41,7 @@ export default class Right_Bar extends React.Component {
                 <span className= "glyphicon glyphicon-star-empty white"></span>
               </div>
               <div className= "media-body">
-                <a href="#">UMass vs. BC Hockey Game (UMass Althetics)</a>
+                <a href="#" style={{color: 'black', fontWeight: 'bold'}}>UMass vs. BC Hockey Game (UMass Althetics)</a>
               </div>
             </li>
             <li className= "media">
@@ -49,7 +49,7 @@ export default class Right_Bar extends React.Component {
                 <span className= "glyphicon glyphicon-star-empty white"></span>
               </div>
               <div className= "media-body">
-                <a href="#">Campus Barbeque (UMass Alumni Association)</a>
+                <a href="#" style={{color: 'black', fontWeight: 'bold'}}>Campus Barbeque (UMass Alumni Association)</a>
               </div>
             </li>
           </ul>
