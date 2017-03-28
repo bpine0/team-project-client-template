@@ -1,6 +1,7 @@
 import React from 'react';
 import Right_Bar from './right-bar';
 import Nav_Bar from './nav-bar';
+import CalendarButtons from './calendar-buttons';
 
 
 export default class Home extends React.Component {
@@ -9,6 +10,7 @@ export default class Home extends React.Component {
       <div>
         <Nav_Bar/>
         <Right_Bar/>
+        <CalendarButtons/>
       </div>
     )
   }

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import Nav_Bar from './nav-bar';
 
+=======
+import React from 'react';
+import Nav_Bar from './nav-bar';
+>>>>>>> d51db683dbef767ce71fe5b3dfd6840125c497e2
 //import Events from './event-details';
 
 export default class Calendar extends React.Component{
@@ -9,9 +14,6 @@ export default class Calendar extends React.Component{
     return(
       <div>
         <Nav_Bar/>
-      </div>
-
-      <div>
         <header>
           <button className="arrows">«</button>
           <h2>February 2017  <span style={{fontWeight: 'lighter'}}> My Events </span>
@@ -88,9 +90,6 @@ export default class Calendar extends React.Component{
               </table>
 
               </div>
-
-
-
 
 
     )
