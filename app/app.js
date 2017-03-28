@@ -8,7 +8,7 @@ import Event_Click from './components/event-click.js';
 // import event_details from './components/event-details.js';
 
 import EventDeets from './components/event-details';
-import home from './components/home.js';
+import Home from './components/home.js';
 
 import MyEvents from './components/my-events';
 import search_results from './components/search-results.js';
@@ -24,16 +24,6 @@ if (document.getElementById('calendar') !== null) {
   ReactDOM.render(
     <create_event />,
     document.getElementById('create-event')
-  );
-} else if (document.getElementById('right-bar') !== null) {
-  ReactDOM.render(
-    <Right_Bar />,
-    document.getElementById('right-bar')
-  );
-} else if (document.getElementById('nav-bar') !== null) {
-  ReactDOM.render(
-    <Nav_Bar />,
-    document.getElementById('nav-bar')
   );
 } else if (document.getElementById('event-click') !== null) {
   ReactDOM.render(

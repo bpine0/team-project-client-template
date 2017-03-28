@@ -4,6 +4,7 @@ export default class Event extends React.Component {
   render() {
     return (
       <div>
+        <div className="col-md-9">
         <div className="panel panel-default event-entry">
           <div className="panel-body">
             <div className="row">
@@ -48,6 +49,7 @@ export default class Event extends React.Component {
           </div>
         </div>
       </div>
+    </div>
     )
   }
 }
