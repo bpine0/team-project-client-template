@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4ca56bfc1603049c9e703a605ef0fbec49227b4f
 // import React from 'react';
 // import Events from './event-details';
 //
@@ -74,6 +78,7 @@
 //           <td>23</td>
 //           <td class="event">
 //             24
+<<<<<<< HEAD
 //             <span style="font-size:110%;color:yellow;">&star; </span> </br>
 //             UMass vs. BC Hockey Game <i> 7pm </i> Mullins Center
 //
@@ -174,6 +179,9 @@
 //           <td class="event">
 //             24
 //             <span style="font-size:110%;color:yellow;">&star; </span> </br>
+=======
+//            <span style="font-size:110%;color:yellow;">&star; </span> </br>
+>>>>>>> 4ca56bfc1603049c9e703a605ef0fbec49227b4f
 //             UMass vs. BC Hockey Game <i> 7pm </i> Mullins Center
 //
 //         </td>
