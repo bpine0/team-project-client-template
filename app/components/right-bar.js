@@ -22,7 +22,7 @@ export default class Right_Bar extends React.Component {
             </ul>
           </div>
         </div>
-
+        <p />
         <div className =  "row  event-list">
           <ul className= "media-list">
             <LinkList></LinkList>
