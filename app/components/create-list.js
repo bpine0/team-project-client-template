@@ -3,6 +3,7 @@ import React from 'react';
 export default class createList extends React.Component {
   render() {
     return (
+      <div>
       <div className="col-md-9">
         <h1 classNamename="black"> Create New Event </h1>
         <span className="red">*</span>
@@ -31,7 +32,9 @@ export default class createList extends React.Component {
         <br /><span className="red" />
         <span className="black">Upload Logo:</span>
         <font className="grey" size={1}>Your Image must be JPG or PNG and not exceed ? MB</font>
-        <br /><img src="img/uploadImage.jpg" width="10%" /><br />
+        // <br /><img src="img/uploadImage.jpg" width="10%" /><br />
+        <br /><img src="img/uploadImage.jpg" style={{width: "10%"}} /><br />
+
         <br />
         <input type="file" id="filehooser" />
         <br />
@@ -40,6 +43,7 @@ export default class createList extends React.Component {
         <textarea id="postbox" rows={10} cols={100} name="post" defaultValue={""} />
         <br />
       </div>
+    </div>
     )
   }
 }
