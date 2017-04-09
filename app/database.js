@@ -6,7 +6,70 @@ var startupName = "Jackfruit";
 
 // Put your mock objects here, as in Workshop 4
 var initialData = {
+  "users":{
+    "1":{
+      "_id": 1,
+      "fullName": "Marc Liberatore",
+      "myEventList": 1
+    },
+    "2":{
+      "_id": 2,
+      "fullName": "Bad Larry",
+      "myEventList": 2
+    },
+    "3":{
+      "_id": 3,
+      "fullName": "Lasagna Richards",
+      "myEventList": 3
+    }
+  },
 
+  //all the events
+  "eventList":{
+    "1": { //Event 1
+      "_id": 1,
+      "eventName": "Supplemental Instruction Review",
+      "org": "(UMass LRC)",
+      "image": "img/W.E.B._DuBois_Library.jpg",
+      "time": "Tomorrow at 5:00 pm",
+      "location": "W.E.B. Dubois Library ",
+      "description": "Review Session for CMPSCI 250." //TODO fix the descriptions
+    },
+    "2":{
+      "_id":2,
+      "eventName": "UMass vs. BC Hockey Game",
+      "org": "(UMass Althetics)",
+      "image": "img/UMass_Hockey.jpg",
+      "time": "Friday at 7:00 pm",
+      "location": "Mullins Center",
+      "description": "Some hockey game, somewhere. Sports..." //TODO fix the descriptions
+    },
+    "3":{
+      "_id":3,
+      "eventName": "Campus Barbeque",
+      "org": "(UMass Alumni Association)",
+      "image": "img/Barbeque.jpg",
+      "time":"March 15 at 3:00 pm",
+      "location": "Goodell Lawn",
+      "description": "mac and cheese and lasagna, fuck me up" //TODO fix the descriptions
+    }
+  },
+
+  //user specific event lists
+  "myEventLists":{
+    "1": {
+      "_id": 1,
+      "contents": [1, 2]
+    },
+    "2": {
+      "_id": 2,
+      "contents": [1, 3]
+    },
+    "3": {
+      "_id": 3,
+      "contents": [3]
+    }
+  }
 };
 
 var data = JSON.parse(localStorage.getItem(startupName));
