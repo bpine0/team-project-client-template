@@ -33,7 +33,8 @@ var initialData = {
       "image": "img/W.E.B._DuBois_Library.jpg",
       "time": "Tomorrow at 5:00 pm",
       "location": "W.E.B. Dubois Library ",
-      "description": "Review Session for CMPSCI 250." //TODO fix the descriptions
+      "description": "Review Session for CMPSCI 250.", //TODO fix the descriptions
+      "createTime": 299848875
     },
     "2":{
       "_id":2,
@@ -42,7 +43,8 @@ var initialData = {
       "image": "img/UMass_Hockey.jpg",
       "time": "Friday at 7:00 pm",
       "location": "Mullins Center",
-      "description": "Some hockey game, somewhere. Sports..." //TODO fix the descriptions
+      "description": "Some hockey game, somewhere. Sports...", //TODO fix the descriptions
+      "createTime": 8282819191
     },
     "3":{
       "_id":3,
@@ -51,7 +53,8 @@ var initialData = {
       "image": "img/Barbeque.jpg",
       "time":"March 15 at 3:00 pm",
       "location": "Goodell Lawn",
-      "description": "mac and cheese and lasagna, fuck me up" //TODO fix the descriptions
+      "description": "mac and cheese and lasagna, fuck me up", //TODO fix the descriptions
+      "createTime": 8374839210000
     }
   },
 
