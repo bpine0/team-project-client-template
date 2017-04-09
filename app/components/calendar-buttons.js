@@ -1,5 +1,4 @@
 import React from 'react';
-import Date from './date';
 
 export default class CalendarButtons extends React.Component {
   render() {
@@ -13,15 +12,15 @@ export default class CalendarButtons extends React.Component {
               <ul className="nav nav-pills text-center center-date">
                 <li role="presentation">
                   <a href="#" className="date"><span className="glyphicon glyphicon-chevron-left" />
-                    <Date date = "2/25/2017"> </Date></a>
+                    <div>2/25/2017 </div></a>
                 </li>
                 <li role="presentation">
                   <a href="#" className="date"><span className="glyphicon glyphicon-calendar" /></a>
-                  <p>  <Date date = "2/26/2017"> </Date></p>
+                  <p>  <div>2/26/2017 </div></p>
                 </li>
                 <li role="presentation">
                   <a href="#" className="date">
-                    <span className="glyphicon glyphicon-chevron-right" /><Date date = "2/27/2017"> </Date></a>
+                    <span className="glyphicon glyphicon-chevron-right" /><div>2/25/2017 </div></a>
                 </li>
               </ul>
             </div>
