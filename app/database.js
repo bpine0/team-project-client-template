@@ -34,6 +34,7 @@ var initialData = {
       "time": "Tomorrow at 5:00 pm",
       "location": "W.E.B. Dubois Library ",
       "description": "Review Session for CMPSCI 250.", //TODO fix the descriptions
+      "category": ["Academic"],
       "createTime": 299848875
     },
     "2":{
@@ -44,6 +45,7 @@ var initialData = {
       "time": "Friday at 7:00 pm",
       "location": "Mullins Center",
       "description": "Some hockey game, somewhere. Sports...", //TODO fix the descriptions
+      "category": ["Sports"],
       "createTime": 8282819191
     },
     "3":{
@@ -53,7 +55,8 @@ var initialData = {
       "image": "img/Barbeque.jpg",
       "time":"March 15 at 3:00 pm",
       "location": "Goodell Lawn",
-      "description": "mac and cheese and lasagna, fuck me up", //TODO fix the descriptions
+      "description": "Mac and cheese and lasagna, fuck me up", //TODO fix the descriptions
+      "category": ["Food", "Music"],
       "createTime": 8374839210000
     }
   },

@@ -1,8 +1,27 @@
 import React from 'react';
 import LinkList from './link-list'
-// import ReactDOM from 'react-dom';
+
+import {getMyEventData} from '../server'
 
 export default class Right_Bar extends React.Component {
+  constructor(props) {
+    super(props);
+    // The FeedItem's initial state is what the Feed passed to us.
+    this.state = props.data;
+  }
+
+  handleMyEventClickBar(clickEvent) {
+    clickEvent.preventDefault();
+    if (clickEvent.button === 0) {
+      // Callback function for both the like and unlike cases.
+      getMyEventData(this.state.user, (x) => {
+        print(x);
+      });
+      // this.state.user.myEventList.contents.map((id) => readDocument('eventList', id));
+      // this.setState({likeCounter: updatedLikeCounter});
+  }
+}
+
   render() {
     return (
       <div>
@@ -13,7 +32,7 @@ export default class Right_Bar extends React.Component {
               <li role="presentation" className= "active">
                 <a href="#" className =  "btn btn-default navbar-btn"><span className= "glyphicon glyphicon-fire"></span></a>
               </li>
-              <li role="presentation"><a href="#" className =  "btn btn-default navbar-btn">
+              <li role="presentation"><a href="#" onClick={(e) => this.handleMyEventClickBar(e)} className = "btn btn-default navbar-btn">
                   <span className= "glyphicon glyphicon-star"></span>
                   </a></li>
               <li role="presentation"><a href="#" className =  "btn btn-default navbar-btn">

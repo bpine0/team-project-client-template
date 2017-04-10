@@ -15,11 +15,13 @@ function emulateServerReturn(data, cb) {
  * @param user The ID of the user whose feed we are requesting.
  * @param cb A Function object, which we will invoke when the Feed's data is available.
  */
-export function getEventData(user, cb) {
+
+ //Read all of the myEvent data for the user
+export function getMyEventData(user, cb) {
   // Get the User object with the id "user".
   var userData = readDocument('users', user);
-  // Get the Event object for the user.
-  var eventData = readDocument('feeds', userData.myEventList);
+  // Get the Event objects for the user.
+  var eventData = readDocument('myEventLists', userData.myEventList);
   // Return EventData with resolved references.
   // emulateServerReturn will emulate an asynchronous server operation, which
   // invokes (calls) the "cb" function some time in the future.
@@ -27,7 +29,7 @@ export function getEventData(user, cb) {
 }
 
 
-export function createNewEvent(user, eventName, org, image, time, location, description, cb) {
+export function createNewEvent(user, eventName, org, image, time, location, description, category, cb) {
   // If we were implementing this for real on an actual server, we would check
   // that the user ID is correct & matches the authenticated user. But since
   // we're mocking it, we can be less strict.
@@ -43,6 +45,7 @@ export function createNewEvent(user, eventName, org, image, time, location, desc
     "time": time,
     "location": location,
     "description": description,
+    "category": category,
     "createTime": createTime
   };
 
