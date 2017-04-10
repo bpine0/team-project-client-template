@@ -33,8 +33,15 @@ var initialData = {
       "image": "img/W.E.B._DuBois_Library.jpg",
       "time": "Tomorrow at 5:00 pm",
       "location": "W.E.B. Dubois Library ",
+<<<<<<< HEAD
       "description": "Review Session for CMPSCI 250.", //TODO fix the descriptions
       "category": ["Academic"],
+=======
+      "description": "Review Session for CMPSCI 250. Be there or be square!"+
+        "More than just a review session! Reviewing: Inductive reasoning,"+
+        "proof by contradiction, the properties of Cardie and Duncan, and"+
+        "steady state machines.", //TODO fix the descriptions (Does it work?)
+>>>>>>> ed04b07c80edcb9fcb16c30ffcffd18285bba12d
       "createTime": 299848875
     },
     "2":{
