@@ -16,7 +16,7 @@ export default class CalendarButtons extends React.Component {
                 </li>
                 <li role="presentation">
                   <a href="#" className="date"><span className="glyphicon glyphicon-calendar" /></a>
-                  <p>  <div>2/26/2017 </div></p>
+                  <a>  <div>2/26/2017 </div></a>
                 </li>
                 <li role="presentation">
                   <a href="#" className="date">

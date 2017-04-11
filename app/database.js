@@ -35,10 +35,6 @@ var initialData = {
       "location": "W.E.B. Dubois Library ",
       "description": "Review Session for CMPSCI 250.", //TODO fix the descriptions
       "category": ["Academic"],
-      "description": "Review Session for CMPSCI 250. Be there or be square!"+
-        "More than just a review session! Reviewing: Inductive reasoning,"+
-        "proof by contradiction, the properties of Cardie and Duncan, and"+
-        "steady state machines.", //TODO fix the descriptions (Does it work?)
       "createTime": 299848875
     },
     "2":{
