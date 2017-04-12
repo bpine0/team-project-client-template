@@ -1,10 +1,11 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
+// import {Link} from 'react-router';
 
 export default class Nav_Bar extends React.Component {
   render() {
     return (
-
+      // <div>
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid" id="nav-bar">
         <div>
@@ -62,6 +63,17 @@ export default class Nav_Bar extends React.Component {
       </div>
     </div>
   </nav>
+  // <nav>
+  //   <ul>
+  //     <li><Link to="/">Home</Link></li>
+  //     <li><Link to="/create-event">CreateEvent</Link></li>
+  //     <li><Link to="/calendar/1">Calendar ID: 1</Link></li>
+  //     <li><Link to="/event-details">EventDeets</Link></li>
+  //     <li><Link to="/search-results">SearchResults</Link></li>
+  //     <li><Link to="/my-events/1">Matched ID: 1</Link></li>
+  //   </ul>
+  // </nav>
+  // </div>
     )
   }
 }

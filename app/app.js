@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import {Router, Route, browserHistory} from 'react-router'
 
 // Each major browser view user interface must be imported.
 import Calendar from './components/calendar.js';
 import CreateEvent from './components/create-event.js';
 import Event_Click from './components/event-click.js';
-// import event_details from './components/event-details.js';
-
 import EventDeets from './components/event-details';
 import Home from './components/home.js';
-
 import MyEvents from './components/my-events';
 import SearchResults from './components/search-results.js';
 
@@ -51,3 +49,17 @@ if (document.getElementById('calendar') !== null) {
     document.getElementById('search_results')
   );
 }
+
+
+
+
+// ReactDOM.render((
+//   <Router history={browserHistory}>
+//     <Route path="/" components={Home}/>
+//     <Route path="/calendar/:id" components={Calendar}/>
+//     <Route path="/event-details" components={EventDeets}/>
+//     <Route path="/create-event" components={CreateEvent}/>
+//     <Route path="/my-events/:id" components={MyEvents}/>
+//     <Route path="/search-results" components={SearchResults}/>
+//   </Router>
+// ), document.getElementById('app'));
