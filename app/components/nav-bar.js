@@ -24,9 +24,11 @@ export default class Nav_Bar extends React.Component {
             <div className="input-group">
               <input type="text" className="form-control" placeholder="Search UMass" />
               <span className="input-group-btn">
-                <button type="submit" className="btn btn-default">
-                  <span className="glyphicon glyphicon-search" />
-                </button>
+                <Link to="/search-results">
+                  <button type="submit" className="btn btn-default">
+                    <span className="glyphicon glyphicon-search" />
+                  </button>
+                </Link>
               </span>
             </div>
           </form>
