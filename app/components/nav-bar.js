@@ -1,11 +1,10 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
-// import {Link} from 'react-router';
+import {Link} from 'react-router';
 
 export default class Nav_Bar extends React.Component {
   render() {
     return (
-      // <div>
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid" id="nav-bar">
         <div>
@@ -34,15 +33,21 @@ export default class Nav_Bar extends React.Component {
           <div className="nav navbar-nav navbar-left">
             <div className="btn-toolbar pull-right" role="toolbar">
               <div className="btn-group" role="group">
-                <button type="button" className="btn btn-default navbar-btn">
-                  <span className="glyphicon glyphicon-user" />
-                </button>
-                <button type="button" className="btn btn-default navbar-btn">
-                  <span className="glyphicon glyphicon-calendar" />
-                </button>
-                <button type="button" className="btn btn-default navbar-btn">
-                  <span className="glyphicon glyphicon-plus" />
-                </button>
+                <Link to="/my-events/1">
+                  <button type="button" className="btn btn-default navbar-btn">
+                    <span className="glyphicon glyphicon-user" />
+                  </button>
+                </ Link>
+                <Link to="/calendar/1">
+                  <button type="button" className="btn btn-default navbar-btn">
+                    <span className="glyphicon glyphicon-calendar" />
+                  </button>
+                </Link>
+                <Link to="/create-event">
+                  <button type="button" className="btn btn-default navbar-btn">
+                    <span className="glyphicon glyphicon-plus" />
+                  </button>
+                </Link>
               </div>
               <div className="btn-group" role="group">
                 <button type="button" className="btn btn-default navbar-btn">
@@ -63,17 +68,6 @@ export default class Nav_Bar extends React.Component {
       </div>
     </div>
   </nav>
-  // <nav>
-  //   <ul>
-  //     <li><Link to="/">Home</Link></li>
-  //     <li><Link to="/create-event">CreateEvent</Link></li>
-  //     <li><Link to="/calendar/1">Calendar ID: 1</Link></li>
-  //     <li><Link to="/event-details">EventDeets</Link></li>
-  //     <li><Link to="/search-results">SearchResults</Link></li>
-  //     <li><Link to="/my-events/1">Matched ID: 1</Link></li>
-  //   </ul>
-  // </nav>
-  // </div>
     )
   }
 }
