@@ -1,65 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import {Router, Route, browserHistory} from 'react-router'
+import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 
 // Each major browser view user interface must be imported.
 import Calendar from './components/calendar.js';
 import CreateEvent from './components/create-event.js';
-import Event_Click from './components/event-click.js';
+// import Event_Click from './components/event-click.js';
 import EventDeets from './components/event-details';
 import Home from './components/home.js';
 import MyEvents from './components/my-events';
 import SearchResults from './components/search-results.js';
 
-// For each view conditionally determine which view to display
-// depending on if the ID is present in the HTML.
-if (document.getElementById('calendar') !== null) {
-  ReactDOM.render(
-    <Calendar />,
-    document.getElementById('calendar')
-  );
-} else if (document.getElementById('create-event') !== null) {
-  ReactDOM.render(
-    <CreateEvent />,
-    document.getElementById('create-event')
-  );
-} else if (document.getElementById('event-click') !== null) {
-  ReactDOM.render(
-    <Event_Click />,
-    document.getElementById('event-click')
-  );
-} else if (document.getElementById('event-deets') !== null) {
-  ReactDOM.render(
-    <EventDeets />,
-    document.getElementById('event-deets')
-  );
-} else if (document.getElementById('home') !== null) {
-  ReactDOM.render(
-    <Home />,
-    document.getElementById('home')
-  );
-} else if (document.getElementById('list-my-events') !== null) {
-  ReactDOM.render(
-    <MyEvents />,
-    document.getElementById('list-my-events')
-  );
-} else if (document.getElementById('search_results') !== null) {
-  ReactDOM.render(
-    <SearchResults />,
-    document.getElementById('search_results')
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>{this.props.children}</div>
+    )
+  }
 }
 
-
-
-
-// ReactDOM.render((
-//   <Router history={browserHistory}>
-//     <Route path="/" components={Home}/>
-//     <Route path="/calendar/:id" components={Calendar}/>
-//     <Route path="/event-details" components={EventDeets}/>
-//     <Route path="/create-event" components={CreateEvent}/>
-//     <Route path="/my-events/:id" components={MyEvents}/>
-//     <Route path="/search-results" components={SearchResults}/>
-//   </Router>
-// ), document.getElementById('app'));
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} />
+      <Route path="/calendar/:id" component={Calendar} />
+      <Route path="/event-details" component={EventDeets} />
+      <Route path="/create-event" component={CreateEvent} />
+      <Route path="/my-events/:id" component={MyEvents} />
+      <Route path="/search-results" component={SearchResults} />
+    </Route>
+  </Router>
+), document.getElementById('root'));
