@@ -1,7 +1,6 @@
 import React from 'react';
 import LinkList from './link-list'
-
-//import {getMyEventData} from '../server'
+// import {getMyEventData} from '../server'
 
 export default class Right_Bar extends React.Component {
   constructor(props) {
@@ -10,17 +9,18 @@ export default class Right_Bar extends React.Component {
     this.state = props.data;
   }
 
-//   handleMyEventClickBar(clickEvent) {
-//     clickEvent.preventDefault();
-//     if (clickEvent.button === 0) {
-//       // Callback function for both the like and unlike cases.
-//       getMyEventData(this.state.user, () => {
-//         print(x);
-//       });
-//       // this.state.user.myEventList.contents.map((id) => readDocument('eventList', id));
-//       // this.setState({likeCounter: updatedLikeCounter});
-//   }
-// }
+
+  // handleMyEventClickBar(clickEvent) {
+  //   clickEvent.preventDefault();
+  //   if (clickEvent.button === 0) {
+  //     // Callback function for both the like and unlike cases.
+  //     getMyEventData(this.state.user, () => {
+  //       print(x);
+  //     });
+      // this.state.user.myEventList.contents.map((id) => readDocument('eventList', id));
+      // this.setState({likeCounter: updatedLikeCounter});
+  //}
+//}
 
   render() {
     return (
