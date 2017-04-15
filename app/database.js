@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 // Modify with your startup's name!
 var startupName = "Jackfruit";
@@ -135,10 +135,11 @@ export function resetDatabase() {
   data = JSONClone(initialData);
 }
 
+
 /**
  * Reset database button.
  */
-class ResetDatabase extends React.Component {
+export default class ResetDatabase extends React.Component {
   render() {
     return (
       <button className="btn btn-default" type="button" onClick={() => {
@@ -150,7 +151,9 @@ class ResetDatabase extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <ResetDatabase />,
-  document.getElementById('db-reset')
-);
+
+
+// ReactDOM.render(
+//   <ResetDatabase />,
+//   document.getElementById('db-reset')
+// );

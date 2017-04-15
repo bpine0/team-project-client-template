@@ -1,6 +1,8 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
+import ResetDatabase from '../database'
+// import {ResetDatabase} from '../database';
 
 export default class Nav_Bar extends React.Component {
   render() {
@@ -61,6 +63,11 @@ export default class Nav_Bar extends React.Component {
                   </button>
                   <ul className="dropdown-menu">
                     <li><a href="#">Log out...</a></li>
+                  </ul>
+                  <ul>
+                    <li role="presentation">
+                      <ResetDatabase />
+                    </li>
                   </ul>
                 </div>
               </div>
