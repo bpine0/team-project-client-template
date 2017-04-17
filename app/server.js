@@ -11,21 +11,32 @@ function emulateServerReturn(data, cb) {
 }
 
 /**
+ * Given a feed item ID, returns a FeedItem object with references resolved.
+ * Internal to the server, since it's synchronous.
+ */
+function getMyEventSync(myEventListId) {
+  var myEventList = readDocument('myEventLists', myEventListId);
+  myEventList.contents.map((eventEntry) => readDocument('eventList', eventEntry));
+  return myEventList;
+}
+
+
+/**
  * Emulates a REST call to get the feed data for a particular user.
  * @param user The ID of the user whose feed we are requesting.
  * @param cb A Function object, which we will invoke when the Feed's data is available.
  */
-
  //Read all of the myEvent data for the user
 export function getMyEventData(user, cb) {
   // Get the User object with the id "user".
   var userData = readDocument('users', user);
   // Get the Event objects for the user.
-  var eventData = readDocument('myEventLists', userData.myEventList);
+  var eventListData = readDocument('myEventLists', userData.myEventList);
   // Return EventData with resolved references.
   // emulateServerReturn will emulate an asynchronous server operation, which
   // invokes (calls) the "cb" function some time in the future.
-  emulateServerReturn(eventData, cb);
+  eventListData.contents = eventListData.contents.map(getMyEventSync);
+  emulateServerReturn(eventListData, cb);
 }
 
 
