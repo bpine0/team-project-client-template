@@ -5,6 +5,7 @@ export default class EventThread extends React.Component {
   render() {
     return (
       <div>
+        <h1 className = "black"> My Events </h1>
         <Event event_image="img/W.E.B._DuBois_Library.jpg" event_name="Supplemental Instruction Review" org="(UMass LRC)" time="Tomorrow at 5:00 pm" location="W.E.B. Dubois Library ">
           Review Session for CMPSCI 250. Be there or be square!
           More than just a review session! Reviewing: Inductive reasoning,

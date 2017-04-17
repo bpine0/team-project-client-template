@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   /*background: url(img/campusmap.jpg);*/
   /*background: linear-gradient(90deg, white 72%, #8e0000 28%);*/
   background: linear-gradient(90deg, #a43939 80%, #8e0000 20%);
@@ -10,7 +10,7 @@ body {
 }
 
 .sidebar-pills{
-  margin-top: 28%;
+  margin-top: 5%;
 }
 
 .navbar {

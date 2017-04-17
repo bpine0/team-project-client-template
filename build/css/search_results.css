@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px;
+  /*padding-top: 60px;*/
   background: linear-gradient(90deg, #a43939 80%, #8e0000 20%);
 }
 
@@ -33,7 +33,7 @@ body {
   color: white;
 }
 .sidebar-pills{
-  margin-top: 28%;
+  margin-top: 0%;
 }
 .navbar {
   background-color: #470000;
