@@ -7,7 +7,7 @@ import {readDocument, writeDocument, addDocument} from './database.js';
 function emulateServerReturn(data, cb) {
   setTimeout(() => {
     cb(data);
-  }, 4);
+  }, 1);
 }
 
 /**
@@ -29,12 +29,19 @@ function getMyEventSync(myEventListId) {
  //Read all of the myEvent data for the user
 export function getMyEventData(user, cb) {
   // Get the User object with the id "user".
+  console.log('getMyEventData');
+  console.log(user);
+
   var userData = readDocument('users', user);
   // Get the Event objects for the user.
+  console.log('user');
+
   var eventListData = readDocument('myEventLists', userData.myEventList);
   // Return EventData with resolved references.
   // emulateServerReturn will emulate an asynchronous server operation, which
   // invokes (calls) the "cb" function some time in the future.
+  console.log('eventList');
+
   eventListData.contents = eventListData.contents.map(getMyEventSync);
   emulateServerReturn(eventListData, cb);
 }

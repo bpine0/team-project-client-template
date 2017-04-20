@@ -19,10 +19,16 @@ class App extends React.Component {
   }
 }
 
+class HomePage extends React.Component {
+  render() {
+    return <Home user={1} />
+  }
+}
+
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} />
+      <IndexRoute component={HomePage} />
       <Route path="/calendar/:id" component={Calendar} />
       <Route path="/event-details" component={EventDeets} />
       <Route path="/create-event" component={CreateEvent} />
