@@ -5,6 +5,7 @@ export default class CreateList extends React.Component {
     return (
       <div>
       <div className="col-md-9">
+        <h1 className= "black" align="justify"> Create New Event </h1>
         <span className="red">*</span>
         <span className="black">Event Title:</span>
         <br />
