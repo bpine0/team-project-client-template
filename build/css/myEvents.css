@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px;
+  padding-top: 0px;
   background: linear-gradient(90deg, #a43939 80%, #8e0000 20%);
 
   /*background-color: #8e0000;*/
@@ -50,7 +50,7 @@ a {
 }
 
 .sidebar-pills{
-  margin-top: 28%;
+  margin-top: 0%;
 }
 
 
