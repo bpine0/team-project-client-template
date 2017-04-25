@@ -16,7 +16,8 @@ function emulateServerReturn(data, cb) {
  */
 function getMyEventSync(myEventListId) {
   var myEventList = readDocument('myEventLists', myEventListId);
-  myEventList.contents.map((eventEntry) => readDocument('eventList', eventEntry));
+  console.log("myeventList in sync " + myEventList);
+  myEventList.contents = myEventList.contents.map((eventEntry) => readDocument('eventList', eventEntry));
   return myEventList;
 }
 
@@ -45,7 +46,6 @@ export function getMyEventData(user, cb) {
   eventListData.contents = eventListData.contents.map(getMyEventSync);
   emulateServerReturn(eventListData, cb);
 }
-
 
 export function createNewEvent(user, eventName, org, image, time, location, description, category, cb) {
   // If we were implementing this for real on an actual server, we would check

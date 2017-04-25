@@ -17,6 +17,7 @@ refresh() {
   getMyEventData(this.props.user, (eventData) => {
     this.setState(eventData);
   })
+
 }
 
 componentDidMount(){
@@ -58,17 +59,12 @@ componentDidMount(){
         <div className =  "row  event-list">
           <ul className= "media-list">
             <LinkList />
-            {this.state.contents.map((eventItem) =>{
+            {this.state.contents.map((eventItem, i) => {
               console.log(eventItem);
-              console.log('wow');
-              console.log(eventItem.time);
-              console.log(eventItem.eventName);
-              return (
-                <EventLink key={eventItem._id} date={eventItem.time} name={eventItem.eventName} />
-              )
+              console.log("0: " + eventItem.contents[1]);
+              <EventLink key={i} date={eventItem.contents.time} name={eventItem.contents.eventName} />
             })
-
-              }
+          }
           </ul>
         </div>
       </div>
