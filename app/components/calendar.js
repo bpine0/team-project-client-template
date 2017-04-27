@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Nav_Bar from './nav-bar';
 
 
@@ -87,6 +87,24 @@ export default class Calendar extends React.Component{
               </div>
 
 
+    )
+  }
+}
+*/
+import React from 'react';
+import BigCalendar from 'react-big-calendar';
+//import events from '../events';
+
+//import BigCalendar from 'react-big-calendar';
+import moment from 'moment';
+
+export default class Calendar extends React.Component{
+  render(){
+    return (
+      <BigCalendar
+        {...this.props}
+        defaultDate={new Date(2015, 3, 1)}
+      />
     )
   }
 }
