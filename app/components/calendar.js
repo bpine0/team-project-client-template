@@ -93,16 +93,26 @@ export default class Calendar extends React.Component{
 */
 import React from 'react';
 import BigCalendar from 'react-big-calendar';
-//import events from '../events';
+import events from 'events';
 
 //import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
+BigCalendar.setLocalizer(
+  BigCalendar.momentLocalizer(moment)
+);
 
 export default class Calendar extends React.Component{
   render(){
     return (
       <BigCalendar
         {...this.props}
+        events={[
+  {
+    'title': 'All Day Event',
+    'allDay': true,
+    'start': new Date(2015, 3, 0),
+    'end': new Date(2015, 3, 1)
+  }]}
         defaultDate={new Date(2015, 3, 1)}
       />
     )
