@@ -16,9 +16,13 @@ function emulateServerReturn(data, cb) {
  */
 function getMyEventSync(myEventListId) {
   var myEventList = readDocument('myEventLists', myEventListId);
-  console.log("myeventList in sync " + myEventList);
   myEventList.contents = myEventList.contents.map((eventEntry) => readDocument('eventList', eventEntry));
   return myEventList;
+}
+
+function getEventSync(eventId) {
+  var eventItem = readDocument('eventList', eventId);
+  return eventItem
 }
 
 
@@ -30,20 +34,15 @@ function getMyEventSync(myEventListId) {
  //Read all of the myEvent data for the user
 export function getMyEventData(user, cb) {
   // Get the User object with the id "user".
-  console.log('getMyEventData');
-  console.log(user);
-
   var userData = readDocument('users', user);
-  // Get the Event objects for the user.
-  console.log('user');
 
+  // Get the Event list for the user.
   var eventListData = readDocument('myEventLists', userData.myEventList);
+
   // Return EventData with resolved references.
   // emulateServerReturn will emulate an asynchronous server operation, which
   // invokes (calls) the "cb" function some time in the future.
-  console.log('eventList');
-
-  eventListData.contents = eventListData.contents.map(getMyEventSync);
+  eventListData.contents = eventListData.contents.map(getEventSync);
   emulateServerReturn(eventListData, cb);
 }
 

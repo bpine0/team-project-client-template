@@ -66,7 +66,7 @@ var initialData = {
     },
     "2": {
       "_id": 2,
-      "contents": [1, 3]
+      "contents": [1, 2, 3]
     },
     "3": {
       "_id": 3,

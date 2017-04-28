@@ -37,24 +37,16 @@ componentDidMount(){
 // }
 
   render() {
-    console.log(this.state);
-    console.log("Contents: " + this.state.contents);
-    var content_dummy = (
+    var user_event_list = (
       <LinkList>
         {this.state.contents.map((eventItem, i) => {
-        console.log("the object is "  + eventItem);
-        console.log(eventItem);
-        console.log("0: " + eventItem.contents[1]);
-        console.log("id: " + eventItem._id);
-        console.log("time: " + eventItem.time);
-        console.log("name: " + eventItem.name);
+          return (
+            <EventLink key={i} date={eventItem.time} name={eventItem.eventName}></EventLink>
+          );
+        }
+        )}
+      </LinkList>);
 
-        <EventLink key={eventItem._id} date={eventItem.contents.time} name={eventItem.contents.eventName} />
-        })
-      }
-    </LinkList>
-  );
-  console.log(content_dummy);
     return (
       <div>
         <div className = "col-md-2 pull-right">
@@ -76,7 +68,7 @@ componentDidMount(){
         <p />
         <div className =  "row  event-list">
           <ul className= "media-list">
-            {content_dummy}
+            {user_event_list}
           </ul>
         </div>
       </div>
