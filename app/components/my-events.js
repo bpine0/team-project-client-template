@@ -9,7 +9,7 @@ export default class MyEvents extends React.Component {
       <div>
         <Right_Bar user={1}/>
         <Nav_Bar/>
-        <EventThread />
+        <EventThread user={1}/>
       </div>
     )
   }

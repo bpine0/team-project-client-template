@@ -1,22 +1,37 @@
 import React from 'react';
 import Event from './event-entry';
+import {getMyEventData} from '../server';
 
 export default class EventThread extends React.Component {
+  constructor(props) {
+    super(props);
+    // The FeedItem's initial state is what the Feed passed to us.
+    // this.state = props.data;
+    this.state = {
+      contents: []
+    }
+  }
+
+refresh() {
+  getMyEventData(this.props.user, (eventData) => {
+    this.setState(eventData);
+  })
+}
+
+componentDidMount(){
+  this.refresh();
+}
+
   render() {
+    var user_thread = (this.state.contents.map((eventItem, i) => {
+          return (
+            <Event key={i} event_image={eventItem.image} date={eventItem.time} event_name={eventItem.eventName} org={eventItem.org} time={eventItem.time} location={eventItem.location}>{eventItem.description}</Event>
+          );
+        }
+      ));
     return (
       <div>
-        <Event event_image="img/W.E.B._DuBois_Library.jpg" event_name="Supplemental Instruction Review" org="(UMass LRC)" time="Tomorrow at 5:00 pm" location="W.E.B. Dubois Library ">
-          Review Session for CMPSCI 250. Be there or be square!
-          More than just a review session! Reviewing: Inductive reasoning,
-          proof by contradiction, the properties of Cardie and Duncan, and
-          steady state machines.
-        </Event>
-        <Event event_image="img/UMass_Hockey.jpg" event_name="UMass vs. BC Hockey Game" org="(UMass Althetics)" time="Friday at 7:00 pm" location="Mullins Center">
-          Review Session for CMPSCI 250. Be there or be square!
-          More than just a review session! Reviewing: Inductive reasoning,
-          proof by contradiction, the properties of Cardie and Duncan, and
-          steady state machines.
-        </Event>
+        {user_thread}
       </div>
     )
   }

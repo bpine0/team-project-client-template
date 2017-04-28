@@ -17,7 +17,6 @@ refresh() {
   getMyEventData(this.props.user, (eventData) => {
     this.setState(eventData);
   })
-
 }
 
 componentDidMount(){
@@ -37,6 +36,7 @@ componentDidMount(){
 // }
 
   render() {
+    console.log(this)
     var user_event_list = (
       <LinkList>
         {this.state.contents.map((eventItem, i) => {
