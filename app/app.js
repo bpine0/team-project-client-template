@@ -10,6 +10,7 @@ import EventDeets from './components/event-details';
 import Home from './components/home.js';
 import MyEvents from './components/my-events';
 import SearchResults from './components/search-results.js';
+import AllEvents from './components/my-events.js';
 
 class App extends React.Component {
   render() {
@@ -34,6 +35,7 @@ ReactDOM.render((
       <Route path="/create-event" component={CreateEvent} />
       <Route path="/my-events/:id" component={MyEvents} />
       <Route path="/search-results" component={SearchResults} />
+      <Route path="/all-events" component={AllEvents} />
     </Route>
   </Router>
 ), document.getElementById('root'));
