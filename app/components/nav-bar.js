@@ -52,11 +52,9 @@ export default class Nav_Bar extends React.Component {
                     <span className="glyphicon glyphicon-plus" />
                   </button>
                 </Link>
-              </div>
-              <div className="btn-group" role="group">
-                <Link to="/event-details/1">
+                <Link to="/all-events">
                   <button type="button" className="btn btn-default navbar-btn">
-                    <span className="glyphicon glyphicon-lock" />
+                    <span className="glyphicon glyphicon-list" />
                   </button>
                 </Link>
                 <div className="btn-group" role="group">
@@ -64,6 +62,7 @@ export default class Nav_Bar extends React.Component {
                     <span className="caret" />
                   </button>
                   <ul className="dropdown-menu">
+                    <li><a href="#">Settings</a></li>
                     <li><a href="#">Log out...</a></li>
                   </ul>
                   <ul>
@@ -73,6 +72,8 @@ export default class Nav_Bar extends React.Component {
                   </ul>
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
