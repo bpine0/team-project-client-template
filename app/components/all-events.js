@@ -8,6 +8,7 @@ export default class AllEvents extends React.Component {
   render() {
     return (
       <div>
+        <h1 className = "black"> All Events </h1>
         <Right_Bar user={1}/>
         <Nav_Bar/>
         <EventThread user={0}/>
