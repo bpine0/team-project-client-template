@@ -30,7 +30,7 @@ ReactDOM.render((
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
       <Route path="/calendar/:id" component={Calendar} />
-      <Route path="/event-details" component={EventDeets} />
+      <Route path="/event-details/:id" component={EventDeets} />
       <Route path="/create-event" component={CreateEvent} />
       <Route path="/my-events/:id" component={MyEvents} />
       <Route path="/search-results" component={SearchResults} />

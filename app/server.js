@@ -46,6 +46,13 @@ export function getMyEventData(user, cb) {
   emulateServerReturn(eventListData, cb);
 }
 
+export function getEvent(eventId, cb) {
+  //pull the event data
+  var eventData = readDocument('eventList', eventId);
+  eventData.contents = getEventSync(eventId);
+  emulateServerReturn(eventData, cb);
+}
+
 export function createNewEvent(user, eventName, org, image, time, location, description, category, cb) {
   // If we were implementing this for real on an actual server, we would check
   // that the user ID is correct & matches the authenticated user. But since

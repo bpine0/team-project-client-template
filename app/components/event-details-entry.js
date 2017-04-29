@@ -1,15 +1,34 @@
 import React from 'react';
 import Event from './event-entry';
+import {getEvent} from '../server';
 
 export default class EventDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    // The FeedItem's initial state is what the Feed passed to us.
+    // this.state = props.data;
+    this.state = {
+      contents: []
+    }
+  }
+
+refresh() {
+  getEvent(this.props.eventID, (eventData) => {
+    this.setState(eventData);
+  })
+}
+
+componentDidMount(){
+  this.refresh();
+}
+
   render() {
+    var event_info = (
+      <Event event_image={this.state.contents.image} date={this.state.contents.time} event_name={this.state.contents.eventName} org={this.state.contents.org} time={this.state.contents.time} location={this.state.contents.location}>{this.state.contents.description}</Event>
+    );
     return (
       <div>
-        <Event event_image="img/Barbeque.jpg" event_name="Campus Barbeque" org="(UMass Alumni Association)" time="March 15 at 3:00 pm" location="Goodell Lawn">
-          <p /> Come join us for wonderful food hosted by UMass Dining:
-          <br /> Cheeseburgers, grilled chicken, veggie burger, corn on the cob, macaroni and cheese, salad, and cookies
-          <p />Listen to UMass Dynamics perform while eating a lunch hosted by the Alumni Associaition
-        </Event>
+        {event_info}
       </div>
     )
   }

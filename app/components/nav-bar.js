@@ -54,9 +54,11 @@ export default class Nav_Bar extends React.Component {
                 </Link>
               </div>
               <div className="btn-group" role="group">
-                <button type="button" className="btn btn-default navbar-btn">
-                  <span className="glyphicon glyphicon-lock" />
-                </button>
+                <Link to="/event-details/1">
+                  <button type="button" className="btn btn-default navbar-btn">
+                    <span className="glyphicon glyphicon-lock" />
+                  </button>
+                </Link>
                 <div className="btn-group" role="group">
                   <button type="button" className="btn btn-default dropdown-toggle navbar-btn" data-toggle="dropdown">
                     <span className="caret" />
