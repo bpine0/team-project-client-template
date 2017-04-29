@@ -53,7 +53,7 @@ export function getEvent(eventId, cb) {
   emulateServerReturn(eventData, cb);
 }
 
-export function createNewEvent(user, eventName, org, image, time, location, description, category, cb) {
+export function createNewEvent(user, eventName, org, org_link, image, time, location, description, category, cb) {
   // If we were implementing this for real on an actual server, we would check
   // that the user ID is correct & matches the authenticated user. But since
   // we're mocking it, we can be less strict.
@@ -65,6 +65,7 @@ export function createNewEvent(user, eventName, org, image, time, location, desc
     "author": user,
     "eventName": eventName,
     "org": org,
+    "org_link": org_link,
     "image": image,
     "time": time,
     "location": location,
