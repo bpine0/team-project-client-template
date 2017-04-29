@@ -7,6 +7,7 @@ export default class EventDeets extends React.Component {
   render() {
     return (
       <div>
+        <h3></h3>
         <Nav_Bar/>
         <Right_Bar user={1}/>
         <EventDetails eventID={1}/>
