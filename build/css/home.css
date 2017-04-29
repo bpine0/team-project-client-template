@@ -59,6 +59,14 @@ body {
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
+.right_header {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 5px 20px 5px;
+  text-align: center;
+}
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,

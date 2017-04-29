@@ -51,19 +51,7 @@ componentDidMount(){
       <div>
         <div className = "col-md-2 pull-right">
         <div className= "row">
-          <div className= "col-md-12 sidebar-pills">
-            <ul className= "nav nav-pills">
-              <li role="presentation" className= "active">
-                <a href="#" className =  "btn btn-default navbar-btn"><span className= "glyphicon glyphicon-fire"></span></a>
-              </li>
-              <li role="presentation"><a href="#" className = "btn btn-default navbar-btn">
-                  <span className= "glyphicon glyphicon-star"></span>
-                  </a></li>
-              <li role="presentation"><a href="#" className =  "btn btn-default navbar-btn">
-                  <span className= "glyphicon glyphicon-filter"></span>
-                  </a></li>
-            </ul>
-          </div>
+          <h2 className="right_header">My Events Quickview</h2>
         </div>
         <p />
         <div className =  "row  event-list">

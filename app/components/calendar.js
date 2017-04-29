@@ -11,7 +11,7 @@ export default class Calendar extends React.Component{
 
         <header>
           <button className="arrows">«</button>
-          <h2>February 2017  <span style={{fontWeight: 'lighter'}}> My Events </span>
+          <h2 className="header_calendar">February 2017  <span style={{fontWeight: 'lighter'}}> My Events </span>
             <div className="dropdown"> <span>Filter Events ▿ </span>
               <div className="dropdown-content">
                 <p>All Events</p>
