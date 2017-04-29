@@ -8,8 +8,8 @@ export default class EventDeets extends React.Component {
     return (
       <div>
         <Nav_Bar/>
-        <Right_Bar/>
-        <EventDetails />
+        <Right_Bar user={1}/>
+        <EventDetails eventID={1}/>
       </div>
     )
   }
