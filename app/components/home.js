@@ -9,7 +9,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <Nav_Bar/>
-        <Right_Bar/>
+        <Right_Bar user={1}/>
         <CalendarButtons/>
       </div>
     )

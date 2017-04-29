@@ -8,12 +8,11 @@ export default class LinkList extends React.Component {
             return (
               <li className="media">
                 {child}
+              <p />
               </li>
             )
           })}
         </ul>
-
-
     )
   }
 }
