@@ -7,6 +7,7 @@ export default class MyEvents extends React.Component {
   render() {
     return (
       <div>
+        <h1 className = "black"> My Events </h1>
         <Right_Bar user={1}/>
         <Nav_Bar/>
         <EventThread user={1}/>

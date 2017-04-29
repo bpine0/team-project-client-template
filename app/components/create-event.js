@@ -7,6 +7,7 @@ export default class CreateEvent extends React.Component {
   render() {
     return (
       <div>
+        <h1 className = "black"> Create Event </h1>
         <Nav_Bar/>
         <CreateRBar/>
         <CreateList/>

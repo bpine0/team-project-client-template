@@ -31,7 +31,6 @@ componentDidMount(){
       ));
     return (
       <div>
-        <h1 className = "black"> My Events </h1>
         {user_thread}
       </div>
     )
