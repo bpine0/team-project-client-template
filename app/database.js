@@ -38,7 +38,10 @@ var initialData = {
       "image": "img/W.E.B._DuBois_Library.jpg",
       "time": "Tomorrow at 5:00 pm",
       "location": "W.E.B. Dubois Library ",
-      "description": "Review Session for CMPSCI 250.",
+      "description": "Review Session for CMPSCI 250. Be there or be square! "+
+         " More than just a review session! Reviewing: Inductive reasoning, "+
+         "proof by contradiction, the properties of Cardie and Duncan, and "+
+         "steady state machines.", //TODO fix the descriptions (Does it work?)
       "createTime": 299848875
     },
     "2":{
@@ -48,7 +51,9 @@ var initialData = {
       "image": "img/UMass_Hockey.jpg",
       "time": "Friday at 7:00 pm",
       "location": "Mullins Center",
-      "description": "Some hockey game, somewhere. Sports...",
+      "description": "UMass vs. Boston College. Show up and show your support for the" +
+          " minutemen in their last home game of the season!" +
+          " Be one of the first 1,000 students and get a free UMass Hockey T-shirt!",
       "createTime": 8282819191
     },
     "3":{
@@ -58,7 +63,9 @@ var initialData = {
       "image": "img/Barbeque.jpg",
       "time":"March 15 at 3:00 pm",
       "location": "Goodell Lawn",
-      "description": "Mac and cheese and lasagna, fuck me up",
+      "description": "Come join us for wonderful food hosted by UMass Dining:" +
+          " Cheeseburgers, grilled chicken, veggie burger, corn on the cob, macaroni and cheese, salad, and cookies"+
+          " Listen to UMass Dynamics perform while eating a lunch hosted by the Alumni Associaition",
       "createTime": 8374839210000
     }
   },

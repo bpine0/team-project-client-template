@@ -33,21 +33,6 @@ export default class Event extends React.Component {
               </div>
             </div>
           </div>
-          <hr className = "break" />
-          <div className="row">
-            <div className="col-md-12">
-              <ul className="list-inline features-bar">
-                <li>
-                  <a href="#"><span className="glyphicon glyphicon-comment">
-                  </span> What Are People Saying?</a>
-                </li>
-                <li>
-                  <a href="#"><span className="glyphicon glyphicon-pencil">
-                  </span> Write a Review!</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>
