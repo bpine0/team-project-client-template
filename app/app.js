@@ -10,7 +10,7 @@ import EventDeets from './components/event-details';
 import Home from './components/home.js';
 import MyEvents from './components/my-events';
 import SearchResults from './components/search-results.js';
-import AllEvents from './components/my-events.js';
+import AllEvents from './components/all-events.js';
 
 class App extends React.Component {
   render() {

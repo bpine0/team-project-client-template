@@ -7,6 +7,11 @@ var startupName = "Jackfruit";
 // Put your mock objects here, as in Workshop 4
 var initialData = {
   "users":{
+    "0":{
+      "_id": 0,
+      "fullName": "Default User",
+      "myEventList": 0
+    },
     "1":{
       "_id": 1,
       "fullName": "Marc Liberatore",
@@ -60,6 +65,10 @@ var initialData = {
 
   //user specific event lists
   "myEventLists":{
+    "0": {
+      "_id": 0,
+      "contents": [1, 2, 3]
+    },
     "1": {
       "_id": 1,
       "contents": [1, 2]
