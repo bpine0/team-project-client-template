@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class CalendarButtons extends React.Component {
   render() {
@@ -25,9 +26,15 @@ export default class CalendarButtons extends React.Component {
               </ul>
             </div>
             <img src="img/campusmap.jpg" width="100%" />
-            <div className="glyphicon northeast glyphicon-pushpin" />
-            <div className="glyphicon goodell_lawn glyphicon-pushpin" />
-            <div className="glyphicon newman glyphicon-pushpin" />
+            <Link to="/my-events/1" className="northeast">
+              <button className="glyphicon northeast glyphicon-pushpin button" />
+            </Link>
+            <Link to="/my-events/1" className="goodell_lawn">
+              <button className="glyphicon goodell_lawn glyphicon-pushpin button" />
+            </Link>
+            <Link to="/my-events/1" className="newman">
+              <button className="glyphicon newman glyphicon-pushpin button" />
+            </Link>
           </div>
         </div>
       </div>
