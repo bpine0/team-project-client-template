@@ -1,4 +1,6 @@
 import React from 'react';
+var ObjectID = require('mongodb').ObjectID;
+
 // import ReactDOM from 'react-dom';
 
 // Modify with your startup's name!
@@ -8,26 +10,26 @@ var startupName = "Jackfruit";
 var initialData = {
   "users":{
     "1":{
-      "_id": 1,
+      "_id": new ObjectID("000000000000000000000001"),
       "fullName": "Marc Liberatore",
-      "myEventList": 1
+      "myEventList": new ObjectID("000000000000000000000001")
     },
     "2":{
-      "_id": 2,
+      "_id": new ObjectID("000000000000000000000002"),
       "fullName": "Bad Larry",
-      "myEventList": 2
+      "myEventList": new ObjectID("000000000000000000000002")
     },
     "3":{
-      "_id": 3,
+      "_id": new ObjectID("000000000000000000000003"),
       "fullName": "Lasagna Richards",
-      "myEventList": 3
+      "myEventList": new ObjectID("000000000000000000000003")
     }
   },
 
   //all the events
   "eventList":{
     "1": { //Event 1
-      "_id": 1,
+      "_id": new ObjectID("000000000000000000000001"),
       "eventName": "Supplemental Instruction Review",
       "org": "(UMass LRC)",
       "image": "img/W.E.B._DuBois_Library.jpg",
@@ -38,7 +40,7 @@ var initialData = {
       "createTime": 299848875
     },
     "2":{
-      "_id":2,
+      "_id":new ObjectID("000000000000000000000002"),
       "eventName": "UMass vs. BC Hockey Game",
       "org": "(UMass Althetics)",
       "image": "img/UMass_Hockey.jpg",
@@ -49,7 +51,7 @@ var initialData = {
       "createTime": 8282819191
     },
     "3":{
-      "_id":3,
+      "_id":new ObjectID("000000000000000000000003"),
       "eventName": "Campus Barbeque",
       "org": "(UMass Alumni Association)",
       "image": "img/Barbeque.jpg",
@@ -64,16 +66,16 @@ var initialData = {
   //user specific event lists
   "myEventLists":{
     "1": {
-      "_id": 1,
-      "contents": [1, 2]
+      "_id": new ObjectID("000000000000000000000001"),
+      "contents": [new ObjectID("000000000000000000000001"), new ObjectID("000000000000000000000002")]
     },
     "2": {
-      "_id": 2,
-      "contents": [1, 3]
+      "_id": new ObjectID("000000000000000000000002"),
+      "contents": [new ObjectID("000000000000000000000001"), new ObjectID("000000000000000000000003")]
     },
     "3": {
-      "_id": 3,
-      "contents": [3]
+      "_id": new ObjectID("000000000000000000000003"),
+      "contents": [new ObjectID("000000000000000000000003")]
     }
   }
 };
