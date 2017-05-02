@@ -4,6 +4,7 @@ export default class CreateList extends React.Component {
   render() {
     return (
       <div>
+        <h1 className="event-page-title">{this.props.title}</h1>
       <div className="col-md-9">
         <span className="red">&nbsp;</span>
         <span className="black">Event Title:</span>
