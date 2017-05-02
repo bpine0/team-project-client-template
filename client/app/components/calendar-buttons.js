@@ -26,13 +26,13 @@ export default class CalendarButtons extends React.Component {
               </ul>
             </div>
             <img src="img/campusmap.jpg" width="100%" />
-            <Link to="/my-events/1" className="northeast">
+            <Link to={"/event-details/" + this.props._id} className="northeast">
               <button className="glyphicon northeast glyphicon-pushpin button" />
             </Link>
-            <Link to="/my-events/1" className="goodell_lawn">
+            <Link to={"/event-details/" + this.props._id} className="goodell_lawn">
               <button className="glyphicon goodell_lawn glyphicon-pushpin button" />
             </Link>
-            <Link to="/my-events/1" className="newman">
+            <Link to={"/event-details/" + this.props._id} className="newman">
               <button className="glyphicon newman glyphicon-pushpin button" />
             </Link>
           </div>
