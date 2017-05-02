@@ -77,10 +77,18 @@ body {
   border-radius: 10%;
 }
 
-/*.media-body >*/
-/*a {
+.app-name {
   color: white;
-}*/
+  margin-left: 10%;
+  /*font-family: "Times New Roman", Times, serif, cursive;*/
+  font-family: cursive;
+  margin-bottom: 1px;
+}
+
+.header-title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
 .date {
   color: black;

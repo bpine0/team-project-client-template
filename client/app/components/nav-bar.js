@@ -76,6 +76,9 @@ export default class Nav_Bar extends React.Component {
 
             </div>
           </div>
+          <div className = "navbar-nav app-name">
+              <h2 className = "header-title"> whaddup? </ h2>
+          </div>
         </div>
       </div>
     </div>
