@@ -29,8 +29,10 @@ componentDidMount(){
           );
         }
       ));
+      console.log(this.props.title);
     return (
       <div>
+        <h1 className = "event-page-title">{this.props.title}</h1>
         {user_thread}
       </div>
     )

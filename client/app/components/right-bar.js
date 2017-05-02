@@ -50,17 +50,17 @@ componentDidMount(){
     return (
       <div>
         <div className = "col-md-2 pull-right">
-        <div className= "row">
-          <h2 className="right_header">My Events Quickview</h2>
-        </div>
+          <div className= "row">
+            <h2 className="right_header">My Events Quickview</h2>
+          </div>
         <p />
-        <div className =  "row  event-list">
-          <ul className= "media-list">
-            {user_event_list}
-          </ul>
+          <div className =  "row  event-list">
+            <ul className= "media-list">
+              {user_event_list}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
     )
   }
 }
