@@ -25,7 +25,7 @@ componentDidMount(){
   render() {
     var user_thread = (this.state.contents.map((eventItem, i) => {
           return (
-            <Event key={i} event_image={eventItem.image} date={eventItem.time} event_name={eventItem.eventName} org={eventItem.org} time={eventItem.time} location={eventItem.location}>{eventItem.description}</Event>
+            <Event key={i} event_image={eventItem.image} date={eventItem.time} event_name={eventItem.eventName} org={eventItem.org} org_link={eventItem.org_link} time={eventItem.time} location={eventItem.location}>{eventItem.description}</Event>
           );
         }
       ));
