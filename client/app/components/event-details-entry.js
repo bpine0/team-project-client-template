@@ -24,7 +24,7 @@ componentDidMount(){
 
   render() {
     var event_info = (
-      <Event event_image={this.state.contents.image} date={this.state.contents.time} event_name={this.state.contents.eventName} org={this.state.contents.org} time={this.state.contents.time} location={this.state.contents.location}>{this.state.contents.description}</Event>
+      <Event event_image={this.state.contents.image} date={this.state.contents.time} event_name={this.state.contents.eventName} org={this.state.contents.org} org_link={this.state.org_link} time={this.state.contents.time} location={this.state.contents.location}>{this.state.contents.description}</Event>
     );
     return (
       <div>
