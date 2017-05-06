@@ -1,7 +1,5 @@
-// Your startup's initial mock objects go here
-var initialData = {
-
-};
+// Data goes here.
+var initialData = {};
 
 var data;
 // If 'true', the in-memory object representing the database has changed,
