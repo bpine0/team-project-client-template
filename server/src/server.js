@@ -23,3 +23,21 @@ app.use(express.static('../client/build'));
 app.use(bodyParser.text());
 // Support receiving JSON in HTTP request bodies
 app.use(bodyParser.json());
+
+
+function getMyEventData(user) {
+  // Get the User object with the id "user".
+
+  var userData = readDocument('users', user);
+
+  // Get the Event list for the user.
+  var eventListData = readDocument('myEventLists', userData.myEventList);
+
+  // Return EventData with resolved references.
+  // emulateServerReturn will emulate an asynchronous server operation, which
+  // invokes (calls) the "cb" function some time in the future.
+  eventListData.contents = eventListData.contents.map(getEventSync);
+  return(eventListData);
+ }
+
+ // app.get()

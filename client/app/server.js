@@ -1,5 +1,65 @@
 import {readDocument, writeDocument, addDocument} from './database.js';
 
+function sendXHR(verb, resource, body, cb) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(verb, resource);
+  // xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+  // The below comment tells ESLint that FacebookError is a global.
+  // Otherwise, ESLint would complain about it! (See what happens in Atom if
+  // you remove the comment...)
+  /* global FacebookError */
+
+  // Response received from server. It could be a failure, though!
+  xhr.addEventListener('load', function() {
+    var statusCode = xhr.status;
+    var statusText = xhr.statusText;
+    if (statusCode >= 200 && statusCode < 300) {
+      // Success: Status code is in the [200, 300) range.
+      // Call the callback with the final XHR object.
+      cb(xhr);
+    } else {
+      // Client or server error.
+      // The server may have included some response text with details concerning
+      // the error.
+      var responseText = xhr.responseText;
+      FacebookError('Could not ' + verb + " " + resource + ": Received " + statusCode + " " + statusText + ": " + responseText);
+    }
+  });
+
+  // Time out the request if it takes longer than 10,000
+  // milliseconds (10 seconds)
+  xhr.timeout = 10000;
+
+  // Network failure: Could not connect to server.
+  xhr.addEventListener('error', function() {
+    FacebookError('Could not ' + verb + " " + resource + ": Could not connect to the server.");
+  });
+
+  // Network failure: request took too long to complete.
+  xhr.addEventListener('timeout', function() {
+    FacebookError('Could not ' + verb + " " + resource + ": Request timed out.");
+  });
+
+  switch (typeof(body)) {
+    case 'undefined':
+      // No body to send.
+      xhr.send();
+      break;
+    case 'string':
+      // Tell the server we are sending text.
+      xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+      xhr.send(body);
+      break;
+    case 'object':
+      // Tell the server we are sending JSON.
+      xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      // Convert body into a JSON string.
+      xhr.send(JSON.stringify(body));
+      break;
+    default:
+      throw new Error('Unknown body type: ' + typeof(body));
+  }
+}
 /**
  * Emulates how a REST call is *asynchronous* -- it calls your function back
  * some time in the future with data.
@@ -34,17 +94,24 @@ function getEventSync(eventId) {
  //Read all of the myEvent data for the user
 export function getMyEventData(user, cb) {
   // Get the User object with the id "user".
-  var userData = readDocument('users', user);
+//   var userData = readDocument('users', user);
+//
+//   // Get the Event list for the user.
+//   var eventListData = readDocument('myEventLists', userData.myEventList);
+//
+//   // Return EventData with resolved references.
+//   // emulateServerReturn will emulate an asynchronous server operation, which
+//   // invokes (calls) the "cb" function some time in the future.
+//   eventListData.contents = eventListData.contents.map(getEventSync);
+//   emulateServerReturn(eventListData, cb);
+  sendXHR('GET', '/my-events/1', undefined, (xhr) => {
+    // Call the callback with the data.
+    cb(JSON.parse(xhr.responseText));
+  });
+ }
 
-  // Get the Event list for the user.
-  var eventListData = readDocument('myEventLists', userData.myEventList);
-
-  // Return EventData with resolved references.
-  // emulateServerReturn will emulate an asynchronous server operation, which
-  // invokes (calls) the "cb" function some time in the future.
-  eventListData.contents = eventListData.contents.map(getEventSync);
-  emulateServerReturn(eventListData, cb);
-}
+ // var xhr = new XMLHttpRequest();
+ // xhr.open('GET', '/user/4/feed');
 
 export function getEvent(eventId, cb) {
   //pull the event data
