@@ -13,15 +13,15 @@ export default class CalendarButtons extends React.Component {
               <ul className="nav nav-pills text-center center-date">
                 <li role="presentation">
                   <a href="#" className="date"><span className="glyphicon glyphicon-chevron-left" />
-                    <div>5/1/2017 </div></a>
+                    <div>2/25/2017 </div></a>
                 </li>
                 <li role="presentation">
-                  <a href="#" className="date"><span className="glyphicon glyphicon-calendar" />
-                    <div>5/2/2017 </div></a>
+                  <a href="#" className="date"><span className="glyphicon glyphicon-calendar" /></a>
+                  <a>  <div>2/26/2017 </div></a>
                 </li>
                 <li role="presentation">
                   <a href="#" className="date">
-                    <span className="glyphicon glyphicon-chevron-right" /><div>5/3/2017 </div></a>
+                    <span className="glyphicon glyphicon-chevron-right" /><div>2/25/2017 </div></a>
                 </li>
               </ul>
             </div>
